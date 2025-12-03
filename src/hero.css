@@ -1,0 +1,141 @@
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(16, 14, 28, 0.7), rgba(2, 53, 81, 0.7)),
+    url("C:\Users\SOHAM BHAELRAO\Desktop\SV-IND\src\assets\i7.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-hero {
+  text-align: center;
+  max-width: 800px;
+}
+
+.text-hero h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.text-hero p {
+  max-width: 800px;
+  margin: 10px auto 20px;
+  line-height: 1.4;
+  font-size: 20px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rem;
+  transition: all 0.02s;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  z-index: 0;
+  box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  background: rgb(193, 228, 248);
+  color: rgb(33, 0, 85);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hoverEffect div {
+  background: rgb(222, 0, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 0, 75, 1) 0%,
+    rgba(191, 70, 255, 1) 49%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 40rem;
+  width: 15rem;
+  height: 15rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+
+.button:hover .hoverEffect div {
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar ul {
+    display: none; /* Hide menu items for mobile */
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .text-hero {
+    text-align: center;
+    max-width: 800px;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .text-hero h1 {
+    font-size: 30px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: 600;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .text-hero p {
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 800px;
+    margin: 10px auto 20px;
+    line-height: 1.4;
+    font-size: 20px;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+}

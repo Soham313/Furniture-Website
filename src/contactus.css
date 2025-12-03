@@ -1,0 +1,170 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("/src/assets/co1.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 50px 20px;
+}
+
+/* Contact Page Layout */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 30px;
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Left Section - Information */
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  background: transparent;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 8px 0;
+}
+
+/* Right Section - Contact Form */
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  background: transparent;
+  text-align: center;
+}
+
+.contact-form h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Form Inputs */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  color: #ffffff;
+  background-color: #00000020;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+}
+
+/* Submit Button */
+.submit-btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003f80);
+  transform: scale(1.06);
+  box-shadow: 0 5px 15px rgba(0, 91, 187, 0.4);
+}
+
+/* Smooth Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    max-width: 90%;
+    padding: 25px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-info {
+    padding: 15px;
+  }
+}
+
+.contact-page .navbar {
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar ul {
+    display: none; /* Hide menu items for mobile */
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+/* From Uiverse.io by doniaskima */
+.btn-17,
+.btn-17 *,
+.btn-17 :after,
+.btn-17 :before,
+.btn-17:after,
+.btn-17:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}

@@ -1,0 +1,12 @@
+/* Hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+/* When active */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,156 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.title {
+  padding-top: 40px;
+  z-index: 10;
+  background-color: transparent;
+  position: relative;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.title h1 {
+  font-size: 45px;
+  text-transform: none;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 40px;
+  color: blue;
+}
+.swipe {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 70px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  overflow: hidden;
+}
+/* Shiny Sweep */
+.swipe::after {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -120%;
+  width: 250%;
+  height: 250%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translate(-150%, -150%) rotate(25deg); /* starting */
+  }
+  40% {
+    transform: translate(20%, 20%) rotate(25deg); /* → 70% forward */
+  }
+  60% {
+    transform: translate(-30%, -30%) rotate(25deg); /* ← back to 30% */
+  }
+  100% {
+    transform: translate(150%, 150%) rotate(25deg); /* → final full sweep */
+  }
+}
+
+.container {
+  background-color: rgba(255, 0, 0, 0);
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+/* From Uiverse.io by abrahamcalsin */
+.swipe-gsap {
+  position: absolute;
+
+  right: 50px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #000000;
+  opacity: 0;
+  z-index: 100;
+  width: 200px;
+}
+
+/* ---------------------------------------------------------- */
+/* 📱 RESPONSIVE DESIGN (Mobile-Friendly Adjustments)         */
+/* ---------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 12px;
+  }
+
+  .title h1 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 26px;
+  }
+
+  .swipe {
+    width: 200px;
+    height: 55px;
+    border-radius: 30px;
+  }
+
+  .swipe-gsap {
+    right: 20px;
+    font-size: 28px;
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 10px;
+  }
+
+  .title h1 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+  .swipe {
+    width: 160px;
+    height: 45px;
+    border-radius: 25px;
+  }
+
+  .swipe-gsap {
+    right: 10px;
+    font-size: 22px;
+    width: 130px;
+  }
+
+  .container {
+    height: 80px;
+  }
+}

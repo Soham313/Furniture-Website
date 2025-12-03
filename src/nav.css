@@ -1,0 +1,215 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Default Navbar */
+.navbar {
+  top: 0px;
+  border: 0px solid transparent;
+  border-radius: 50px;
+  height: 65px;
+  margin-top: 10px;
+  padding: 0px;
+  background: transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  color: white;
+  transition:
+    transform 0.6s ease-in-out,
+    opacity 0.5s ease-in-out;
+}
+
+/* Completely hide navbar when scrolling down */
+.navbar.hidden {
+  transform: translateY(-120%); /* Push navbar fully off-screen */
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction */
+}
+
+/* Show navbar when scrolling up */
+.navbar.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.logo {
+  height: 70px;
+  width: 70px;
+  animation: fadeInRight 2s ease-out forwards;
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); /* Starts 20px to the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Ends at its original position */
+  }
+}
+
+.navbar ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0px 20px;
+  font-size: 20px;
+}
+
+/* home button */
+.home-btn {
+  font-size: large;
+  padding: 8.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #022133;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.home-btn:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+  color: black;
+}
+
+.home-btn:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+/* about us button */
+.about-btn {
+  font-size: large;
+  padding: 8.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #022133;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.about-btn:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+  color: black;
+}
+
+.about-btn:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+/* career button */
+.gallery-btn {
+  font-size: large;
+  padding: 8.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #022133;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.gallery-btn:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+  color: black;
+}
+
+.gallery-btn:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+/* contact us button */
+.btn {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #4343d3;
+  border-radius: 25px;
+  color: #18181a;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 12px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.btn span:last-child {
+  color: rgb(255, 255, 255);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 12px;
+  line-height: 13px;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.btn:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.btn:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}

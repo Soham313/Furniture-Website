@@ -1,0 +1,29 @@
+.gallery-3d-container {
+  width: 100%;
+  background-color: aliceblue;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+.gallery-3d-ring {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  transition: transform 0.5s ease;
+}
+
+.gallery-3d-card {
+  position: absolute;
+  padding: 50px;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  background-position: center;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease;
+  cursor: pointer;
+}

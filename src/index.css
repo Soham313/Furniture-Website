@@ -1,0 +1,46 @@
+@import url('link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet" ');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "New Amsterdam", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+}
+.navbar {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.wavebg {
+  z-index: -1;
+  width: 100%;
+}
+
+/* Add media queries at the end */
+@media (max-width: 768px) {
+  /* Tablet adjustments */
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile adjustments */
+  body {
+    font-size: 12px;
+  }
+}

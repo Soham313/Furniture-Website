@@ -1,0 +1,238 @@
+.footer {
+  background-color: #050505;
+  color: white;
+  padding: 40px 0;
+  animation: fadeIn 1.5s ease forwards;
+  border-top: #201f1f solid 5px;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-Up Animation */
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1.2s ease forwards;
+}
+
+.slide-up:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.slide-up:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.slide-up:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.footer-content {
+  display: flex;
+  min-width: 100%;
+  border-bottom: 1px solid #bfb6b6;
+  padding-bottom: 20px;
+}
+
+.footer-section1,
+.footer-section2,
+.footer-section3 {
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-section1 h4 {
+  color: #ddd;
+  filter: drop-shadow(0 0 18px #f4cae6);
+}
+.footer-section1 p {
+  margin: 10px 0 0 0;
+  line-height: 1;
+  color: #ffffff;
+}
+/* Social icons */
+.footer-section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-section3 h2 {
+  margin-bottom: 10px;
+  text-shadow:
+    0 0 5px #8d8d8d,
+    0 0 10px #ababab;
+}
+
+.footer-section3 a {
+  color: #fff;
+  font-size: 20px;
+  margin: 10px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* FACEBOOK */
+.s1:hover {
+  color: #1877f2; /* Official FB Blue */
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #1877f2) drop-shadow(0 0 12px #3b5998);
+}
+
+/* TWITTER (X) */
+.s2:hover {
+  color: #1da1f2; /* Official Twitter Blue */
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #1da1f2) drop-shadow(0 0 12px #1a91da);
+}
+
+/* INSTAGRAM (GRADIENT) */
+.s3 svg {
+  fill: transparent;
+}
+
+.s3:hover {
+  display: inline-block;
+  background: radial-gradient(
+    circle at 30% 110%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  border-radius: 6px;
+  filter: drop-shadow(0 0 8px #d6249f) drop-shadow(0 0 12px #fd5949);
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+}
+
+/* WHATSAPP */
+.s4:hover {
+  color: #25d366; /* WhatsApp green */
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #25d366) drop-shadow(0 0 12px #128c7e);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+.owner {
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow:
+    0 0 5px #8d8d8d,
+    0 0 10px #ababab;
+}
+.footer-section1 {
+  width: 30%;
+}
+.footer-section2 {
+  width: 40%;
+}
+.footer-section3 {
+  width: 30%;
+}
+/* ✅ Responsive design: On small screens, make everything stack */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section:nth-child(2),
+  .footer-section:nth-child(3) {
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+/* BRAND NAME */
+.brand {
+  text-align: center;
+}
+
+.brand-name {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(90deg, #dde6eb, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s infinite alternate ease-in-out;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 5px #ffffff,
+      0 0 10px #ffffff;
+  }
+  to {
+    text-shadow:
+      0 0 10px #23366b,
+      0 0 20px #1a9589;
+  }
+}
+
+.brand-sub {
+  font-size: 32px;
+  margin: 0;
+  color: #ddd;
+}
+
+/* ✅ Responsive Layout */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .footer-section {
+    margin: 15px 0;
+    width: 50px;
+    text-align: center;
+  }
+  .footer-section1 {
+    margin: 15px 0;
+    width: 300px;
+    text-align: center;
+  }
+  .footer-section3 {
+    margin: 15px 0;
+    width: 300px;
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+}
