@@ -1,6 +1,5 @@
 import React from "react";
 import "./hero.css";
-import i7 from "./assets/i7.jpg";
 
 function Hero() {
   const handleExploreClick = () => {
