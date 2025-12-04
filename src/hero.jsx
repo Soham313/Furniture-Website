@@ -1,5 +1,6 @@
 import React from "react";
 import "./hero.css";
+import i7 from "./assets/i7.jpg";
 
 function Hero() {
   const handleExploreClick = () => {
@@ -10,7 +11,14 @@ function Hero() {
   };
 
   return (
-    <div className="hero">
+    <div
+      className="hero"
+      style={{
+        backgroundImage: `linear-gradient(rgba(16,14,28,0.7), rgba(2,53,81,0.7)), url(${i7})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="text-hero">
         <h1 data-aos="fade-up" data-aos-duration="3000">
           We ensure better work for better world{" "}
