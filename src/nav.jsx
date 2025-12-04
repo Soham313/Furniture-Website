@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./nav.css";
 import "./nav-menu.css";
-import logo from "C:/Users/SOHAM BHAELRAO/Desktop/SV-IND/src/assets/i4.png";
+import logo from "./assets/i4.png";
 
 function Nav() {
   const [isVisible, setIsVisible] = useState(true);
