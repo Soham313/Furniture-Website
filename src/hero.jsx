@@ -14,7 +14,7 @@ function Hero() {
     <div
       className="hero"
       style={{
-        backgroundImage: `linear-gradient(rgba(16,14,28,0.7), rgba(2,53,81,0.7)), url(${i7})`,
+        backgroundImage: ` url(${i7}) ,linear-gradient(rgba(16,14,28,0.7), rgba(2,53,81,0.7))`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
