@@ -11,13 +11,13 @@ import WaveBackground from "./wavebg";
 import img1 from "./assets/h14.jpg";
 import img2 from "./assets/h24.jpg";
 import img3 from "./assets/h34.jpg";
-import img4 from "./assets/h4.jpg";
-import img5 from "./assets/h5.jpg";
-import img6 from "./assets/h6.jpg";
-import img7 from "./assets/h7.jpg";
-import img8 from "./assets/h8.jpg";
-import img9 from "./assets/h9.jpg";
-import img10 from "./assets/h10.jpg";
+import img4 from "./assets/h44.jpg";
+import img5 from "./assets/h54.jpg";
+import img6 from "./assets/h64.jpg";
+import img7 from "./assets/h74.jpg";
+import img8 from "./assets/h84.jpg";
+import img9 from "./assets/h94.jpg";
+import img10 from "./assets/h104.jpg";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 

@@ -81,9 +81,8 @@ function Contact() {
         <div className="contact-info">
           <h2>Contact Information</h2>
           <p>📍 Location: 123 Furniture St, City, Country</p>
-          <p>📞 Phone: +123 456 7890</p>
-          <p>📧 Email: support@furniture.com</p>
-          <p>⏰ Working Hours: Mon - Fri, 9:00 AM - 6:00 PM</p>
+          <p>📞 Phone: +91 74149799**</p>
+          <p>📧 Email: sohambhalerao317@gmail.com</p>
         </div>
 
         <form onSubmit={handleSubmit} className="contact-form">
