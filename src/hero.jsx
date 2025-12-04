@@ -12,7 +12,6 @@ function Hero() {
 
   return (
     <div className="hero">
-      <span className="hero-image" />
       <div className="text-hero">
         <h1 data-aos="fade-up" data-aos-duration="3000">
           We ensure better work for better world{" "}
