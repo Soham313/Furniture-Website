@@ -11,14 +11,7 @@ function Hero() {
   };
 
   return (
-    <div
-      className="hero"
-      style={{
-        backgroundImage: ` url(${i7})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className="hero">
       <div className="text-hero">
         <h1 data-aos="fade-up" data-aos-duration="3000">
           We ensure better work for better world{" "}
